@@ -1,0 +1,8 @@
+.inline-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.professor, .team {
+    white-space: nowrap;
+}

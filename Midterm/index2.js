@@ -11,18 +11,20 @@ function changeBackgroundColor(event) {
     background.style.backgroundColor = colorList[randomIndex];
 }
 
-function myFunction() {
-    var less = document.getElementsByClassName("less")[2];
-    var moreText = document.getElementsByClassName("more")[2];
-    var btnText = document.getElementsByClassName("myBtn")[2];
-  
-    if (less.style.display === "none") {
-      less.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
-    } else {
-      less.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
+function myFunction(event) {
+    const btn = event.target;
+    const content = btn.parentElement;
+
+    const less = content.getElementsByClassName("less")[0];
+    const moreText = content.getElementsByClassName("more")[0];
+
+      if (less.style.display === "none") {
+          less.style.display = "inline";
+          btn.innerHTML = "Read more";
+          moreText.style.display = "none";
+      } else {
+          less.style.display = "none";
+          btn.innerHTML = "Read less";
+          moreText.style.display = "inline";
     }
 }
